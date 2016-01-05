@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z66-8j-5DX">
+                                <rect key="frame" x="178" y="261" width="244" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="jMI-o3-n2g"/>
+                                    <constraint firstAttribute="width" constant="244" id="pFG-Gk-fNA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="42"/>
+                                <state key="normal" title="Начать Игру">
+                                    <color key="titleColor" red="0.22843254245078076" green="0.8521033653846154" blue="0.2121902321842454" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="t7w-Ot-lZ5" kind="show" id="OMX-xf-hmI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет! У меня есть для тебя задания!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gD-B0-FCG">
+                                <rect key="frame" x="20" y="97" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="PAY-Kq-AR7"/>
+                                    <constraint firstAttribute="height" constant="21" id="ZkC-6b-cd4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="18"/>
+                                <color key="textColor" red="0.24361566315672806" green="0.28733833332619052" blue="0.8472285067461538" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Я буду предлагать тебе буквы" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wr-ok-Zce">
+                                <rect key="frame" x="20" y="126" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Ig4-Ui-LZX"/>
+                                    <constraint firstAttribute="width" constant="560" id="bP5-XF-PuS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="18"/>
+                                <color key="textColor" red="0.24361566315672806" green="0.28733833332619052" blue="0.8472285067461538" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="из которых ты будешь собирать слова." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQN-Q3-HZl">
+                                <rect key="frame" x="20" y="155" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="hGe-Tm-Pv6"/>
+                                    <constraint firstAttribute="height" constant="21" id="vkb-vO-l0c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="18"/>
+                                <color key="textColor" red="0.24361566315672806" green="0.28733833332619052" blue="0.8472285067461538" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На каждое слово у тебя есть 3 попытки." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zq1-8U-UvS">
+                                <rect key="frame" x="20" y="184" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="cjb-Hp-A4t"/>
+                                    <constraint firstAttribute="height" constant="21" id="xbi-DA-AFs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="18"/>
+                                <color key="textColor" red="0.24361566315672806" green="0.28733833332619052" blue="0.8472285067461538" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ну, что, Начнем?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkO-91-tf6">
+                                <rect key="frame" x="20" y="213" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9zw-PK-kz9"/>
+                                    <constraint firstAttribute="width" constant="560" id="KAR-HB-1IS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="18"/>
+                                <color key="textColor" red="0.24361566315672806" green="0.28733833332619052" blue="0.8472285067461538" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3gD-B0-FCG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="77" id="2SE-hU-6L8"/>
+                            <constraint firstItem="gQN-Q3-HZl" firstAttribute="top" secondItem="6Wr-ok-Zce" secondAttribute="bottom" constant="8" id="8ga-L7-89i"/>
+                            <constraint firstItem="6Wr-ok-Zce" firstAttribute="top" secondItem="3gD-B0-FCG" secondAttribute="bottom" constant="8" id="9bf-yu-kNW"/>
+                            <constraint firstItem="3gD-B0-FCG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FXX-Ei-Naa"/>
+                            <constraint firstItem="bkO-91-tf6" firstAttribute="top" secondItem="Zq1-8U-UvS" secondAttribute="bottom" constant="8" id="QKj-7n-HL1"/>
+                            <constraint firstItem="6Wr-ok-Zce" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="StI-52-dUj"/>
+                            <constraint firstItem="Z66-8j-5DX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zj4-w8-gqV"/>
+                            <constraint firstItem="Zq1-8U-UvS" firstAttribute="top" secondItem="gQN-Q3-HZl" secondAttribute="bottom" constant="8" id="dMe-Eb-e8F"/>
+                            <constraint firstItem="Z66-8j-5DX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="241" id="fGb-tP-bzG"/>
+                            <constraint firstItem="Zq1-8U-UvS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hLq-gG-NB4"/>
+                            <constraint firstItem="gQN-Q3-HZl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rci-NX-bGp"/>
+                            <constraint firstItem="bkO-91-tf6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wno-cb-15d"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="336"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="Jcy-Sr-iDp">
+            <objects>
+                <viewController id="t7w-Ot-lZ5" customClass="WGGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kNH-xE-ogF"/>
+                        <viewControllerLayoutGuide type="bottom" id="XoP-d8-aEu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eVY-ur-UdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш результат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVt-cJ-8a9">
+                                <rect key="frame" x="20" y="422" width="560" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="HBY-Lz-GvW"/>
+                                    <constraint firstAttribute="width" constant="560" id="YYB-S2-8xb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.23921568630000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuO-lE-AzC">
+                                <rect key="frame" x="20" y="360" width="560" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="bcV-GV-aoD"/>
+                                    <constraint firstAttribute="width" constant="560" id="g6n-15-2dC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="41"/>
+                                <state key="normal" title="Ответить">
+                                    <color key="titleColor" red="0.20392156859999999" green="0.23921568630000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="okAction:" destination="t7w-Ot-lZ5" eventType="touchUpInside" id="FZP-gl-WD7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TC9-0H-Akv">
+                                <rect key="frame" x="357" y="270" width="44" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="wf2-HL-xV5"/>
+                                    <constraint firstAttribute="height" constant="61" id="zvn-7N-uej"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Л">
+                                    <color key="titleColor" red="1" green="0.59385557861297111" blue="0.2986645151014109" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="letterL:" destination="t7w-Ot-lZ5" eventType="touchUpInside" id="OSv-DC-UBh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGs-go-A17">
+                                <rect key="frame" x="285" y="201" width="33" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="QY7-dD-cXu"/>
+                                    <constraint firstAttribute="width" constant="33" id="uqG-hq-Rpp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="С">
+                                    <color key="titleColor" red="1" green="0.59385557861297111" blue="0.2986645151014109" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="letterC:" destination="t7w-Ot-lZ5" eventType="touchUpInside" id="at0-t8-cbT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A30-6v-cDg">
+                                <rect key="frame" x="281" y="132" width="40" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Vvo-C2-HhT"/>
+                                    <constraint firstAttribute="width" constant="40" id="fee-wo-0c1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="У">
+                                    <color key="titleColor" red="1" green="0.59385557861297111" blue="0.2986645151014109" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nru-B6-WUR">
+                                <rect key="frame" x="206" y="132" width="39" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="3uJ-me-RNR"/>
+                                    <constraint firstAttribute="height" constant="61" id="8iz-qm-Z5z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="О">
+                                    <color key="titleColor" red="1" green="0.59385557861297111" blue="0.2986645151014109" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="letterO:" destination="t7w-Ot-lZ5" eventType="touchUpInside" id="yoW-Kj-On9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slM-Tb-qkM">
+                                <rect key="frame" x="360" y="201" width="38" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="NMS-UZ-zcR"/>
+                                    <constraint firstAttribute="height" constant="61" id="Vk3-Xq-7VN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Н">
+                                    <color key="titleColor" red="1" green="0.59385557861297111" blue="0.2986645151014109" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="letterN:" destination="t7w-Ot-lZ5" eventType="touchUpInside" id="FHC-xy-lj0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucq-OP-lXh">
+                                <rect key="frame" x="206" y="201" width="36" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="afY-sf-G02"/>
+                                    <constraint firstAttribute="width" constant="36" id="fYE-Ol-sDz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Я">
+                                    <color key="titleColor" red="1" green="0.59385557861297111" blue="0.2986645151014109" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtO-yR-I0E">
+                                <rect key="frame" x="200" y="270" width="48" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="bdW-dQ-Kef"/>
+                                    <constraint firstAttribute="height" constant="61" id="dxd-sf-aHF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Ш">
+                                    <color key="titleColor" red="1" green="0.59385557861297111" blue="0.2986645151014109" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJw-QU-wH3">
+                                <rect key="frame" x="360" y="132" width="38" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="F6T-fE-4Yy"/>
+                                    <constraint firstAttribute="height" constant="61" id="Jce-5e-C2e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="З">
+                                    <color key="titleColor" red="1" green="0.59385557861297111" blue="0.2986645151014109" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5S-CE-jXX">
+                                <rect key="frame" x="283" y="270" width="38" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="FaU-U7-YbZ"/>
+                                    <constraint firstAttribute="height" constant="61" id="omA-9U-iQN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Э">
+                                    <color key="titleColor" red="1" green="0.59385557861297111" blue="0.2986645151014109" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glV-LN-z7T">
+                                <rect key="frame" x="295" y="74" width="25" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="KhN-20-BND"/>
+                                    <constraint firstAttribute="width" constant="25" id="lqU-hL-CGE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.094969494877262875" green="0.76442307692307687" blue="0.044383546871922752" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="У тебя есть" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efu-FY-3N1">
+                                <rect key="frame" x="122" y="69" width="164" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="YSo-xd-Zwx"/>
+                                    <constraint firstAttribute="width" constant="164" id="nty-TT-K1A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.094969494877262875" green="0.76442307692307687" blue="0.044383546871922752" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="попытки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQh-A5-wLF">
+                                <rect key="frame" x="328" y="69" width="124" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="GKj-6q-M6Q"/>
+                                    <constraint firstAttribute="width" constant="124" id="gES-xM-b4W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.094969494880000005" green="0.7644230769" blue="0.044383546869999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какое слово здесь зашифровано?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoU-1g-0Za">
+                                <rect key="frame" x="20" y="34" width="560" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="Ggi-M1-ain"/>
+                                    <constraint firstAttribute="height" constant="39" id="Nah-ih-7tg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.20718687294385998" green="0.24467678526418432" blue="0.72177483974358969" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="next" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcI-em-f6h">
+                                <rect key="frame" x="261" y="462" width="79" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="Ipj-4M-8Ji"/>
+                                    <constraint firstAttribute="height" constant="30" id="h58-AE-eY8"/>
+                                </constraints>
+                                <state key="normal" title="Дальше =&gt;"/>
+                                <connections>
+                                    <segue destination="ZnA-dT-kxD" kind="show" id="4Vg-fd-TTD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nru-B6-WUR" firstAttribute="top" secondItem="kNH-xE-ogF" secondAttribute="bottom" constant="112" id="0X9-d3-1df"/>
+                            <constraint firstItem="hoU-1g-0Za" firstAttribute="top" secondItem="kNH-xE-ogF" secondAttribute="bottom" constant="14" id="30X-MG-KaX"/>
+                            <constraint firstItem="hoU-1g-0Za" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" id="6kb-GX-RWZ"/>
+                            <constraint firstItem="FGs-go-A17" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" constant="1.5" id="8v6-in-cer"/>
+                            <constraint firstItem="A30-6v-cDg" firstAttribute="top" secondItem="kNH-xE-ogF" secondAttribute="bottom" constant="112" id="ASh-aN-rNa"/>
+                            <constraint firstItem="Z5S-CE-jXX" firstAttribute="top" secondItem="FGs-go-A17" secondAttribute="bottom" constant="8" id="BJW-Xh-q5d"/>
+                            <constraint firstItem="OcI-em-f6h" firstAttribute="top" secondItem="wVt-cJ-8a9" secondAttribute="bottom" constant="8" id="CW7-sd-oxN"/>
+                            <constraint firstItem="A30-6v-cDg" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" constant="1" id="FCe-r7-U8q"/>
+                            <constraint firstItem="XuO-lE-AzC" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" id="I3x-J7-vOL"/>
+                            <constraint firstItem="Efu-FY-3N1" firstAttribute="top" secondItem="kNH-xE-ogF" secondAttribute="bottom" constant="49" id="ItU-F7-mGB"/>
+                            <constraint firstItem="TC9-0H-Akv" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" constant="79" id="N9w-WM-20z"/>
+                            <constraint firstItem="BtO-yR-I0E" firstAttribute="top" secondItem="Ucq-OP-lXh" secondAttribute="bottom" constant="8" id="QN2-JQ-vYM"/>
+                            <constraint firstItem="FGs-go-A17" firstAttribute="top" secondItem="A30-6v-cDg" secondAttribute="bottom" constant="8" id="REy-iQ-kZS"/>
+                            <constraint firstItem="OcI-em-f6h" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" id="Td7-Wl-3rg"/>
+                            <constraint firstItem="XuO-lE-AzC" firstAttribute="top" secondItem="Ucq-OP-lXh" secondAttribute="bottom" constant="98" id="UFm-nI-P5S"/>
+                            <constraint firstItem="glV-LN-z7T" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" constant="7.5" id="XSh-Bh-Zlp"/>
+                            <constraint firstItem="TC9-0H-Akv" firstAttribute="top" secondItem="slM-Tb-qkM" secondAttribute="bottom" constant="8" id="XbZ-vt-zQk"/>
+                            <constraint firstItem="glV-LN-z7T" firstAttribute="top" secondItem="hoU-1g-0Za" secondAttribute="bottom" constant="1" id="Y8m-nM-amb"/>
+                            <constraint firstItem="BtO-yR-I0E" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" constant="-76" id="ZHJ-WB-3EM"/>
+                            <constraint firstItem="wVt-cJ-8a9" firstAttribute="top" secondItem="XuO-lE-AzC" secondAttribute="bottom" constant="8" id="e4S-tA-tZl"/>
+                            <constraint firstItem="Ucq-OP-lXh" firstAttribute="top" secondItem="nru-B6-WUR" secondAttribute="bottom" constant="8" id="fLS-zU-y3d"/>
+                            <constraint firstItem="wVt-cJ-8a9" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" id="fMf-Lh-Pw2"/>
+                            <constraint firstItem="Efu-FY-3N1" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" constant="-96" id="fnM-YC-ocr"/>
+                            <constraint firstItem="Ucq-OP-lXh" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" constant="-76" id="gBO-op-Hc9"/>
+                            <constraint firstItem="slM-Tb-qkM" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" constant="79" id="gc8-Eh-dsj"/>
+                            <constraint firstItem="hQh-A5-wLF" firstAttribute="top" secondItem="kNH-xE-ogF" secondAttribute="bottom" constant="49" id="j8p-Wo-fmc"/>
+                            <constraint firstItem="BJw-QU-wH3" firstAttribute="top" secondItem="kNH-xE-ogF" secondAttribute="bottom" constant="112" id="kIT-Te-LCE"/>
+                            <constraint firstItem="Z5S-CE-jXX" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" constant="2" id="lWD-QR-nma"/>
+                            <constraint firstItem="hQh-A5-wLF" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" constant="90" id="pF7-YJ-LbV"/>
+                            <constraint firstItem="slM-Tb-qkM" firstAttribute="top" secondItem="BJw-QU-wH3" secondAttribute="bottom" constant="8" id="reA-w5-QVZ"/>
+                            <constraint firstItem="BJw-QU-wH3" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" constant="79" id="ufR-30-sWq"/>
+                            <constraint firstItem="nru-B6-WUR" firstAttribute="centerX" secondItem="eVY-ur-UdC" secondAttribute="centerX" constant="-74.5" id="z50-ht-Zyu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="wVt-cJ-8a9" id="MPg-BY-YIc"/>
+                        <outlet property="chance" destination="glV-LN-z7T" id="HRf-Nu-Yu7"/>
+                        <outlet property="next" destination="OcI-em-f6h" id="Li0-xg-Uue"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBC-eq-7pM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="336"/>
+        </scene>
+        <!--Game1 View Controller-->
+        <scene sceneID="Xg5-sY-1xm">
+            <objects>
+                <viewController id="ZnA-dT-kxD" customClass="WGGame1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jAU-kA-qY2"/>
+                        <viewControllerLayoutGuide type="bottom" id="1dc-z6-Uxe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Sc-Ir-E6F">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш результат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYu-ZT-yJa">
+                                <rect key="frame" x="20" y="456" width="560" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="QAM-hf-IMf"/>
+                                    <constraint firstAttribute="width" constant="560" id="d3U-ZL-SUB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.23921568630000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YK4-rF-k5V">
+                                <rect key="frame" x="20" y="394" width="560" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="L5t-93-GbB"/>
+                                    <constraint firstAttribute="width" constant="560" id="PCl-WE-KrJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="41"/>
+                                <state key="normal" title="Ответить">
+                                    <color key="titleColor" red="0.20392156859999999" green="0.23921568630000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="okAction:" destination="ZnA-dT-kxD" eventType="touchUpInside" id="1RD-zS-6e7"/>
+                                    <action selector="okAction:" destination="t7w-Ot-lZ5" eventType="touchUpInside" id="479-kL-7vs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xv4-RC-V5S">
+                                <rect key="frame" x="180" y="308" width="38" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="Oqw-Aa-Kwd"/>
+                                    <constraint firstAttribute="height" constant="99" id="oKm-M3-r1F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="И">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="letterI:" destination="ZnA-dT-kxD" eventType="touchUpInside" id="DIU-0l-EAI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbJ-Hg-62E">
+                                <rect key="frame" x="250" y="308" width="38" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="5DH-3P-amQ"/>
+                                    <constraint firstAttribute="width" constant="38" id="Z2I-7e-X7G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Я">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaQ-BE-BKH">
+                                <rect key="frame" x="317" y="308" width="38" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="cPs-C9-Kzg"/>
+                                    <constraint firstAttribute="width" constant="38" id="xRH-rd-coZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="К">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="letterK:" destination="ZnA-dT-kxD" eventType="touchUpInside" id="xF6-O8-wzY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esz-aQ-eWD">
+                                <rect key="frame" x="385" y="306" width="44" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="QYD-dA-k38"/>
+                                    <constraint firstAttribute="height" constant="99" id="iLh-vU-htH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="М">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6X-CH-HLF">
+                                <rect key="frame" x="314" y="258" width="44" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Abm-G2-SDu"/>
+                                    <constraint firstAttribute="width" constant="44" id="r5G-6v-Wkw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Л">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dM2-c9-GDV">
+                                <rect key="frame" x="253" y="170" width="34" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="cLD-mp-qbU"/>
+                                    <constraint firstAttribute="width" constant="34" id="gtP-lG-FN1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Р">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="letterR:" destination="ZnA-dT-kxD" eventType="touchUpInside" id="Yfj-xJ-KZ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ul-nN-3iP">
+                                <rect key="frame" x="250" y="101" width="40" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="bYx-Np-QZo"/>
+                                    <constraint firstAttribute="width" constant="40" id="bed-ic-i6f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Й">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPr-2H-4nv">
+                                <rect key="frame" x="179" y="101" width="39" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="erx-Mz-rAY"/>
+                                    <constraint firstAttribute="width" constant="39" id="lrt-9g-jWR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="А">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="letterA:" destination="ZnA-dT-kxD" eventType="touchUpInside" id="x4J-68-h2a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hix-cX-x4O">
+                                <rect key="frame" x="317" y="189" width="38" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="KtF-0W-TXA"/>
+                                    <constraint firstAttribute="height" constant="61" id="UlN-M6-vfP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Н">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="letterN:" destination="ZnA-dT-kxD" eventType="touchUpInside" id="ttR-R6-bm9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut3-iB-UCD">
+                                <rect key="frame" x="388" y="101" width="38" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="SZW-Uc-gB5"/>
+                                    <constraint firstAttribute="height" constant="99" id="efQ-iu-V6S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Й">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPa-Fy-sVZ">
+                                <rect key="frame" x="180" y="189" width="36" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="Ys8-D6-O6b"/>
+                                    <constraint firstAttribute="height" constant="61" id="cgc-QV-gQ1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Я">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPS-QV-uC7">
+                                <rect key="frame" x="174" y="258" width="48" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="QGy-25-3Z1"/>
+                                    <constraint firstAttribute="height" constant="61" id="gQj-j4-dQA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Ш">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htK-5v-qD8">
+                                <rect key="frame" x="317" y="101" width="38" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="ZLV-Bv-tNi"/>
+                                    <constraint firstAttribute="width" constant="38" id="nPQ-Du-yL6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Т">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="letterT:" destination="ZnA-dT-kxD" eventType="touchUpInside" id="UKj-3i-sFl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmG-hx-Vr3">
+                                <rect key="frame" x="250" y="239" width="38" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="T8U-qm-V5F"/>
+                                    <constraint firstAttribute="width" constant="38" id="fL7-i8-lEs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Х">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyb-pd-Vba">
+                                <rect key="frame" x="295" y="77" width="25" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="uuF-d3-0ny"/>
+                                    <constraint firstAttribute="width" constant="25" id="vMj-g3-zN5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.094969494880000005" green="0.7644230769" blue="0.044383546869999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="У тебя есть" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj2-EZ-2KS">
+                                <rect key="frame" x="122" y="72" width="164" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="7d0-M7-BIn"/>
+                                    <constraint firstAttribute="height" constant="42" id="BWd-gZ-eVS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.094969494880000005" green="0.7644230769" blue="0.044383546869999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="попытки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1R-dH-f9e">
+                                <rect key="frame" x="328" y="72" width="124" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="gIL-QT-YDC"/>
+                                    <constraint firstAttribute="height" constant="42" id="hk3-0Y-DeG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.094969494880000005" green="0.7644230769" blue="0.044383546869999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какое слово здесь зашифровано?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7l-Ce-pq7">
+                                <rect key="frame" x="20" y="42" width="560" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Fmb-Nn-Hd7"/>
+                                    <constraint firstAttribute="width" constant="560" id="bNW-Fd-Iay"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.20718687290000001" green="0.2446767853" blue="0.7217748397" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZe-iU-f0c">
+                                <rect key="frame" x="388" y="170" width="38" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="1ds-es-JqA"/>
+                                    <constraint firstAttribute="width" constant="38" id="cZ6-fW-dsU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="В">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="letterV:" destination="ZnA-dT-kxD" eventType="touchUpInside" id="iwS-mg-44V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aad-rl-3pS">
+                                <rect key="frame" x="388" y="239" width="38" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="6Gy-Yv-0Tc"/>
+                                    <constraint firstAttribute="width" constant="38" id="TCn-Nx-yOi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="54"/>
+                                <state key="normal" title="Ц">
+                                    <color key="titleColor" red="1" green="0.59385557860000004" blue="0.29866451510000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="next" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqW-zr-8pz">
+                                <rect key="frame" x="261" y="496" width="79" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="MSH-bu-Kh7"/>
+                                    <constraint firstAttribute="height" constant="30" id="lZu-9l-h8M"/>
+                                </constraints>
+                                <state key="normal" title="Дальше =&gt;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B1R-dH-f9e" firstAttribute="top" secondItem="jAU-kA-qY2" secondAttribute="bottom" constant="52" id="1c8-iW-RQJ"/>
+                            <constraint firstItem="Iyb-pd-Vba" firstAttribute="top" secondItem="jAU-kA-qY2" secondAttribute="bottom" constant="57" id="1hL-yl-0vS"/>
+                            <constraint firstItem="ZaQ-BE-BKH" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="36" id="5sb-f2-VJx"/>
+                            <constraint firstItem="j6X-CH-HLF" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="36" id="7AF-Hc-t1S"/>
+                            <constraint firstItem="htK-5v-qD8" firstAttribute="top" secondItem="B1R-dH-f9e" secondAttribute="bottom" constant="-13" id="7um-8y-hdW"/>
+                            <constraint firstItem="aad-rl-3pS" firstAttribute="top" secondItem="KZe-iU-f0c" secondAttribute="bottom" constant="-30" id="8EJ-Sx-97T"/>
+                            <constraint firstItem="KZe-iU-f0c" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="107" id="AL0-6b-ih3"/>
+                            <constraint firstItem="hix-cX-x4O" firstAttribute="top" secondItem="htK-5v-qD8" secondAttribute="bottom" constant="-11" id="Cii-Ka-jag"/>
+                            <constraint firstItem="KZe-iU-f0c" firstAttribute="top" secondItem="Ut3-iB-UCD" secondAttribute="bottom" constant="-30" id="E82-Mu-ctU"/>
+                            <constraint firstItem="xv4-RC-V5S" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="-101" id="GAW-dn-8Wq"/>
+                            <constraint firstItem="ZaQ-BE-BKH" firstAttribute="top" secondItem="j6X-CH-HLF" secondAttribute="bottom" constant="-11" id="HNo-ET-Tc6"/>
+                            <constraint firstItem="UYu-ZT-yJa" firstAttribute="top" secondItem="YK4-rF-k5V" secondAttribute="bottom" constant="8" id="McP-Ns-x8t"/>
+                            <constraint firstItem="IPr-2H-4nv" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="-101.5" id="Nr5-vE-W6W"/>
+                            <constraint firstItem="7Ul-nN-3iP" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="-30" id="O8j-Xt-pE3"/>
+                            <constraint firstItem="Ut3-iB-UCD" firstAttribute="top" secondItem="B1R-dH-f9e" secondAttribute="bottom" constant="-13" id="Q78-YP-Djn"/>
+                            <constraint firstItem="o7l-Ce-pq7" firstAttribute="top" secondItem="jAU-kA-qY2" secondAttribute="bottom" constant="22" id="QIu-v1-qXE"/>
+                            <constraint firstItem="Sj2-EZ-2KS" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="-96" id="RIY-t8-2aQ"/>
+                            <constraint firstItem="RPS-QV-uC7" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="-102" id="RrF-N8-OOz"/>
+                            <constraint firstItem="htK-5v-qD8" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="36" id="SB9-fw-Zod"/>
+                            <constraint firstItem="Ut3-iB-UCD" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="107" id="U9N-kX-6aC"/>
+                            <constraint firstItem="mbJ-Hg-62E" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="-31" id="VPh-ub-5Fw"/>
+                            <constraint firstItem="VmG-hx-Vr3" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="-31" id="VYn-tF-oEQ"/>
+                            <constraint firstItem="YK4-rF-k5V" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" id="Zbv-OL-YRB"/>
+                            <constraint firstItem="aad-rl-3pS" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="107" id="ak7-zQ-OG2"/>
+                            <constraint firstItem="Esz-aQ-eWD" firstAttribute="top" secondItem="aad-rl-3pS" secondAttribute="bottom" constant="-32" id="bOI-mV-vPz"/>
+                            <constraint firstItem="Sj2-EZ-2KS" firstAttribute="top" secondItem="jAU-kA-qY2" secondAttribute="bottom" constant="52" id="bmY-0I-ePY"/>
+                            <constraint firstItem="Esz-aQ-eWD" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="107" id="cOH-ZC-JeM"/>
+                            <constraint firstItem="xv4-RC-V5S" firstAttribute="top" secondItem="RPS-QV-uC7" secondAttribute="bottom" constant="-11" id="cTS-tG-qvg"/>
+                            <constraint firstItem="dM2-c9-GDV" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="-30.5" id="dEm-tl-zox"/>
+                            <constraint firstItem="hix-cX-x4O" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="36" id="eb7-f5-LxL"/>
+                            <constraint firstItem="mbJ-Hg-62E" firstAttribute="top" secondItem="VmG-hx-Vr3" secondAttribute="bottom" constant="-30" id="ept-3K-GOj"/>
+                            <constraint firstItem="YK4-rF-k5V" firstAttribute="top" secondItem="ZaQ-BE-BKH" secondAttribute="bottom" constant="-13" id="gO3-tR-La7"/>
+                            <constraint firstItem="IPr-2H-4nv" firstAttribute="top" secondItem="Sj2-EZ-2KS" secondAttribute="bottom" constant="-13" id="gdI-Xe-d8c"/>
+                            <constraint firstItem="o7l-Ce-pq7" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" id="gk4-c6-5h8"/>
+                            <constraint firstItem="pqW-zr-8pz" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" id="idI-B2-6M5"/>
+                            <constraint firstItem="7Ul-nN-3iP" firstAttribute="top" secondItem="Sj2-EZ-2KS" secondAttribute="bottom" constant="-13" id="jhN-Io-e7Y"/>
+                            <constraint firstItem="Iyb-pd-Vba" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="7.5" id="ki4-u6-C0p"/>
+                            <constraint firstItem="pqW-zr-8pz" firstAttribute="top" secondItem="UYu-ZT-yJa" secondAttribute="bottom" constant="8" id="l2x-6d-R0C"/>
+                            <constraint firstItem="UYu-ZT-yJa" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" id="m3S-Nr-z5T"/>
+                            <constraint firstItem="dM2-c9-GDV" firstAttribute="top" secondItem="7Ul-nN-3iP" secondAttribute="bottom" constant="-30" id="ogn-Is-oJ5"/>
+                            <constraint firstItem="B1R-dH-f9e" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="90" id="sKh-yG-79g"/>
+                            <constraint firstItem="j6X-CH-HLF" firstAttribute="top" secondItem="hix-cX-x4O" secondAttribute="bottom" constant="8" id="sPp-ky-YyH"/>
+                            <constraint firstItem="PPa-Fy-sVZ" firstAttribute="top" secondItem="IPr-2H-4nv" secondAttribute="bottom" constant="-11" id="ttx-Yw-CXH"/>
+                            <constraint firstItem="PPa-Fy-sVZ" firstAttribute="centerX" secondItem="0Sc-Ir-E6F" secondAttribute="centerX" constant="-102" id="uBR-k4-z76"/>
+                            <constraint firstItem="RPS-QV-uC7" firstAttribute="top" secondItem="PPa-Fy-sVZ" secondAttribute="bottom" constant="8" id="xEk-UY-eyH"/>
+                            <constraint firstItem="VmG-hx-Vr3" firstAttribute="top" secondItem="dM2-c9-GDV" secondAttribute="bottom" constant="-30" id="yFo-ko-zTA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="UYu-ZT-yJa" id="RGb-4c-cbY"/>
+                        <outlet property="chance" destination="Iyb-pd-Vba" id="MYo-dF-VJX"/>
+                        <outlet property="next" destination="pqW-zr-8pz" id="iTG-Jd-xju"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBx-S6-pXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="1156"/>
+        </scene>
+    </scenes>
+</document>

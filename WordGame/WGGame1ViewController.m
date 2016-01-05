@@ -24,6 +24,10 @@
 
 @implementation WGGame1ViewController
 
+#define word userWord1
+#define chance chance1
+#define strStr stringByAppendingString
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.next.hidden = YES;
@@ -31,63 +35,63 @@
 }
 
 
-NSString *userWord1 = @"";
-NSInteger chance1 = 3;
+NSString *word = @"";
+NSInteger chance = 3;
 
 -(IBAction)letterA:(id)sender
 {
-    userWord1 = [userWord1 stringByAppendingString:@"A"];
+    word = [word strStr:@"A"];
 }
 
 -(IBAction)letterN:(id)sender
 {
-    userWord1 = [userWord1 stringByAppendingString:@"N"];
+    word = [word strStr:@"N"];
 }
 
 -(IBAction)letterT:(id)sender
 {
-    userWord1 = [userWord1 stringByAppendingString:@"T"];
+    word = [word strStr:@"T"];
 }
 
 -(IBAction)letterI:(id)sender
 {
-    userWord1 = [userWord1 stringByAppendingString:@"I"];
+    word = [word strStr:@"I"];
 }
 
 -(IBAction)letterK:(id)sender
 {
-    userWord1 = [userWord1 stringByAppendingString:@"K"];
+    word = [word strStr:@"K"];
 }
 
 -(IBAction)letterV:(id)sender
 {
-    userWord1 = [userWord1 stringByAppendingString:@"V"];
+    word = [word strStr:@"V"];
 }
 
 -(IBAction)letterR:(id)sender
 {
-    userWord1 = [userWord1 stringByAppendingString:@"R"];
+    word = [word strStr:@"R"];
 }
 
 -(IBAction)okAction:(id)sender {
-    if ( [userWord1  isEqual: @"ANTIKVAR" ]|| [userWord1  isEqual: @"nos"] )
+    if ( [word  isEqual: @"ANTIKVAR" ]|| [word  isEqual: @"nos"] )
     {
         self.answerLabel.text = @"Не так уж и сложно - Ты отгадал:)";
-        userWord1 = @"";
+        word = @"";
         self.next.hidden = NO;
     }
     else
     {
-        if (chance1 == 0) {
+        if (chance == 0) {
             self.answerLabel.text = @"Ты проиграл!";
             self.next.hidden = YES;
         }
         else
         {
             self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            userWord1 = @"";
+            word = @"";
             self.next.hidden = YES;
-            chance1--;
+            chance--;
             // NSString *str = @(chance);
             //self.chance.text = str;
         }

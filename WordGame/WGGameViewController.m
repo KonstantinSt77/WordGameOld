@@ -21,6 +21,10 @@
 
 @implementation WGGameViewController
 
+#define word userWord
+#define chance chance
+#define strStr stringByAppendingString
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.next.hidden = YES;
@@ -28,34 +32,34 @@
 }
 
 
-NSString *userWord = @"";
+NSString *word = @"";
 NSInteger chance = 3;
 
 -(IBAction)letterC:(id)sender
 {
-    userWord = [userWord stringByAppendingString:@"s"];
+    word = [word strStr:@"s"];
 }
 
 -(IBAction)letterL:(id)sender
 {
-  userWord = [userWord stringByAppendingString:@"l"];
+  word = [word strStr:@"l"];
 }
 
 -(IBAction)letterO:(id)sender
 {
-    userWord = [userWord stringByAppendingString:@"o"];
+    word = [word strStr:@"o"];
 }
 
 -(IBAction)letterN:(id)sender
 {
-  userWord = [userWord stringByAppendingString:@"n"];
+  word = [word strStr:@"n"];
 }
 
 -(IBAction)okAction:(id)sender {
-if ( [userWord  isEqual: @"slon" ]|| [userWord  isEqual: @"nos"] )
+if ( [word  isEqual: @"slon" ]|| [word  isEqual: @"nos"] )
 {
 self.answerLabel.text = @"Отлично - Ты отгадал:)";
-    userWord = @"";
+    word = @"";
     self.next.hidden = NO;
 }
 else
@@ -67,7 +71,7 @@ else
     else
     {
     self.answerLabel.text = @"Неверно! Попробуй еще раз";
-    userWord = @"";
+    word = @"";
         self.next.hidden = YES;
     chance--;
    // NSString *str = @(chance);

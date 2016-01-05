@@ -1,14 +1,16 @@
 //
-//  WGGame2ViewController.m
+//  WGGame8ViewController.m
 //  WordGame
 //
 //  Created by Kostya on 05.01.16.
 //  Copyright © 2016 Stolyarenko K.S. All rights reserved.
 //
 
-#import "WGGame2ViewController.h"
 
-@interface WGGame2ViewController ()
+#import "WGGame8ViewController.h"
+
+@interface WGGame8ViewController ()
+
 
 -(IBAction)letterA:(id)sender;
 -(IBAction)letterN:(id)sender;
@@ -23,15 +25,15 @@
 @property (strong, nonatomic) IBOutlet UILabel *chance;
 @end
 
-@implementation WGGame2ViewController
+@implementation WGGame8ViewController
 
-#define word userWord2
-#define chance chance2
+
+#define word userWord8
+#define chance chance8
 #define strStr stringByAppendingString
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.next.hidden = YES;
     // Do any additional setup after loading the view.
 }
 
@@ -101,4 +103,4 @@ NSInteger chance = 3;
     
     
     
-}@end 
+}@end

@@ -83,9 +83,10 @@ NSInteger chance = 3;
     }
     else
     {
-        if (chance == 0) {
+        if (chance == 1) {
             self.answerLabel.text = @"Ты проиграл!";
             self.next.hidden = YES;
+            //self.chance.text = @"0";
         }
         else
         {

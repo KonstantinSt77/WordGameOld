@@ -22,7 +22,7 @@
 @implementation WGGameViewController
 
 #define word userWord
-#define chance chance
+#define chancee chance
 #define strStr stringByAppendingString
 
 - (void)viewDidLoad {
@@ -33,7 +33,7 @@
 
 
 NSString *word = @"";
-NSInteger chance = 3;
+NSInteger chancee = 3;
 
 -(IBAction)letterC:(id)sender
 {
@@ -64,16 +64,17 @@ self.answerLabel.text = @"Отлично, ты отгадал, это - Слон
 }
 else
 {
-    if (chance == 0) {
+    if (chance == 1) {
         self.answerLabel.text = @"Ты проиграл!";
         self.next.hidden = YES;
+        self.chance.text = @"0";
     }
     else
     {
     self.answerLabel.text = @"Неверно! Попробуй еще раз";
     word = @"";
         self.next.hidden = YES;
-    chance--;
+    chancee--;
         
         
     

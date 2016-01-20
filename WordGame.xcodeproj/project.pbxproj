@@ -26,6 +26,7 @@
 		8BA27CCC1C3BB85A009EE1D1 /* WGGame10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27CCB1C3BB85A009EE1D1 /* WGGame10ViewController.m */; };
 		8BA27CCF1C3BB87B009EE1D1 /* WGGame9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27CCE1C3BB87B009EE1D1 /* WGGame9ViewController.m */; };
 		8BA27CD11C3BC0DE009EE1D1 /* WGGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27CD01C3BC0DE009EE1D1 /* WGGameViewController.m */; };
+		8BC60FC21C502782004790C9 /* WGHardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC60FC11C502782004790C9 /* WGHardGameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		8BA27CCE1C3BB87B009EE1D1 /* WGGame9ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGGame9ViewController.m; sourceTree = "<group>"; };
 		8BA27CD01C3BC0DE009EE1D1 /* WGGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGGameViewController.m; sourceTree = "<group>"; };
 		8BA27CD21C3BC10F009EE1D1 /* WGGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGGameViewController.h; sourceTree = "<group>"; };
+		8BC60FC01C502782004790C9 /* WGHardGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGHardGameViewController.h; sourceTree = "<group>"; };
+		8BC60FC11C502782004790C9 /* WGHardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGHardGameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +141,7 @@
 				8BA27C7D1C3B2404009EE1D1 /* AppDelegate.m */,
 				8BA27C7F1C3B2404009EE1D1 /* ViewController.h */,
 				8BA27C801C3B2404009EE1D1 /* ViewController.m */,
-				8BC60FBE1C501C4C004790C9 /* GameLevel */,
+				8BC60FBE1C501C4C004790C9 /* PoemGameLevel */,
 				8BA27C821C3B2404009EE1D1 /* Main.storyboard */,
 				8BA27C851C3B2404009EE1D1 /* Assets.xcassets */,
 				8BA27C871C3B2404009EE1D1 /* LaunchScreen.storyboard */,
@@ -174,7 +177,7 @@
 			path = WordGameUITests;
 			sourceTree = "<group>";
 		};
-		8BC60FBE1C501C4C004790C9 /* GameLevel */ = {
+		8BC60FBE1C501C4C004790C9 /* PoemGameLevel */ = {
 			isa = PBXGroup;
 			children = (
 				8BA27CD21C3BC10F009EE1D1 /* WGGameViewController.h */,
@@ -199,8 +202,18 @@
 				8BA27CCE1C3BB87B009EE1D1 /* WGGame9ViewController.m */,
 				8BA27CCA1C3BB85A009EE1D1 /* WGGame10ViewController.h */,
 				8BA27CCB1C3BB85A009EE1D1 /* WGGame10ViewController.m */,
+				8BC60FBF1C5026E8004790C9 /* IntricateRiddleLevel */,
 			);
-			name = GameLevel;
+			name = PoemGameLevel;
+			sourceTree = "<group>";
+		};
+		8BC60FBF1C5026E8004790C9 /* IntricateRiddleLevel */ = {
+			isa = PBXGroup;
+			children = (
+				8BC60FC01C502782004790C9 /* WGHardGameViewController.h */,
+				8BC60FC11C502782004790C9 /* WGHardGameViewController.m */,
+			);
+			name = IntricateRiddleLevel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +362,7 @@
 				8BA27CD11C3BC0DE009EE1D1 /* WGGameViewController.m in Sources */,
 				8BA27C7E1C3B2404009EE1D1 /* AppDelegate.m in Sources */,
 				8BA27C7B1C3B2404009EE1D1 /* main.m in Sources */,
+				8BC60FC21C502782004790C9 /* WGHardGameViewController.m in Sources */,
 				8BA27CCF1C3BB87B009EE1D1 /* WGGame9ViewController.m in Sources */,
 				8BA27CBD1C3BB78C009EE1D1 /* WGGame5ViewController.m in Sources */,
 			);

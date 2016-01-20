@@ -17,7 +17,7 @@
 * **дорабатывается и добавляются новые уровни**
 * **подходит как для детей так и для взрослых**
 
-** Under development **
+**Under development**
 
 This is a game in which you are 2 categories of puzzles: **Puzzles poems** and more complex **Puzzles riddles**. At each stage (level) of the game you are given the mystery of the letters and that you should put down the answer. If you do not manage 3 times you automatically lose.
 During the development of the game we were used features such as:

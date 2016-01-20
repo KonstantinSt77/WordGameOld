@@ -10,12 +10,10 @@
 
 @interface WGGame1ViewController ()
 -(IBAction)letterA:(id)sender;
--(IBAction)letterN:(id)sender;
+-(IBAction)letterL:(id)sender;
 -(IBAction)letterT:(id)sender;
--(IBAction)letterI:(id)sender;
--(IBAction)letterK:(id)sender;
--(IBAction)letterV:(id)sender;
 -(IBAction)letterR:(id)sender;
+-(IBAction)letterI:(id)sender;
 -(IBAction)okAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *next;
 @property (strong, nonatomic) IBOutlet UILabel *answerLabel;
@@ -43,10 +41,6 @@ NSInteger chance = 3;
     word = [word strStr:@"A"];
 }
 
--(IBAction)letterN:(id)sender
-{
-    word = [word strStr:@"N"];
-}
 
 -(IBAction)letterT:(id)sender
 {
@@ -58,15 +52,11 @@ NSInteger chance = 3;
     word = [word strStr:@"I"];
 }
 
--(IBAction)letterK:(id)sender
+-(IBAction)letterL:(id)sender
 {
-    word = [word strStr:@"K"];
+    word = [word strStr:@"L"];
 }
 
--(IBAction)letterV:(id)sender
-{
-    word = [word strStr:@"V"];
-}
 
 -(IBAction)letterR:(id)sender
 {
@@ -74,9 +64,9 @@ NSInteger chance = 3;
 }
 
 -(IBAction)okAction:(id)sender {
-    if ( [word  isEqual: @"ANTIKVAR" ]|| [word  isEqual: @"nos"] )
+    if ( [word  isEqual: @"ALTARI" ])
     {
-        self.answerLabel.text = @"Не так уж и сложно - Ты отгадал:)";
+        self.answerLabel.text = @"Ты отгадал, это - Алтарь!:)";
         word = @"";
         self.next.hidden = NO;
     }
@@ -92,6 +82,7 @@ NSInteger chance = 3;
             word = @"";
             self.next.hidden = YES;
             chance--;
+        
             // NSString *str = @(chance);
             //self.chance.text = str;
         }

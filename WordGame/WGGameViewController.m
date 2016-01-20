@@ -56,9 +56,9 @@ NSInteger chance = 3;
 }
 
 -(IBAction)okAction:(id)sender {
-if ( [word  isEqual: @"slon" ]|| [word  isEqual: @"nos"] )
+if ( [word  isEqual: @"slon" ] )
 {
-self.answerLabel.text = @"Отлично - Ты отгадал:)";
+self.answerLabel.text = @"Отлично, ты отгадал, это - Слон!:)";
     word = @"";
     self.next.hidden = NO;
 }
@@ -74,8 +74,10 @@ else
     word = @"";
         self.next.hidden = YES;
     chance--;
-   // NSString *str = @(chance);
-    //self.chance.text = str;
+        
+        
+    
+        self.chance.text = [@(chance) description];
     }
 }
 

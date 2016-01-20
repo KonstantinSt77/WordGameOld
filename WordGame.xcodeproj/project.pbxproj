@@ -138,28 +138,7 @@
 				8BA27C7D1C3B2404009EE1D1 /* AppDelegate.m */,
 				8BA27C7F1C3B2404009EE1D1 /* ViewController.h */,
 				8BA27C801C3B2404009EE1D1 /* ViewController.m */,
-				8BA27CD21C3BC10F009EE1D1 /* WGGameViewController.h */,
-				8BA27CD01C3BC0DE009EE1D1 /* WGGameViewController.m */,
-				8BA27CAF1C3B3EF2009EE1D1 /* WGGame1ViewController.h */,
-				8BA27CB01C3B3EF2009EE1D1 /* WGGame1ViewController.m */,
-				8BA27CB21C3B45D9009EE1D1 /* WGGame2ViewController.h */,
-				8BA27CB31C3B45D9009EE1D1 /* WGGame2ViewController.m */,
-				8BA27CB51C3BB76B009EE1D1 /* WGGame3ViewController.h */,
-				8BA27CB61C3BB76B009EE1D1 /* WGGame3ViewController.m */,
-				8BA27CB81C3BB77D009EE1D1 /* WGGame4ViewController.h */,
-				8BA27CB91C3BB77D009EE1D1 /* WGGame4ViewController.m */,
-				8BA27CBB1C3BB78C009EE1D1 /* WGGame5ViewController.h */,
-				8BA27CBC1C3BB78C009EE1D1 /* WGGame5ViewController.m */,
-				8BA27CBE1C3BB799009EE1D1 /* WGGame6ViewController.h */,
-				8BA27CBF1C3BB799009EE1D1 /* WGGame6ViewController.m */,
-				8BA27CC11C3BB7AA009EE1D1 /* WGGame7ViewController.h */,
-				8BA27CC21C3BB7AA009EE1D1 /* WGGame7ViewController.m */,
-				8BA27CC41C3BB7B8009EE1D1 /* WGGame8ViewController.h */,
-				8BA27CC51C3BB7B8009EE1D1 /* WGGame8ViewController.m */,
-				8BA27CCD1C3BB87B009EE1D1 /* WGGame9ViewController.h */,
-				8BA27CCE1C3BB87B009EE1D1 /* WGGame9ViewController.m */,
-				8BA27CCA1C3BB85A009EE1D1 /* WGGame10ViewController.h */,
-				8BA27CCB1C3BB85A009EE1D1 /* WGGame10ViewController.m */,
+				8BC60FBE1C501C4C004790C9 /* GameLevel */,
 				8BA27C821C3B2404009EE1D1 /* Main.storyboard */,
 				8BA27C851C3B2404009EE1D1 /* Assets.xcassets */,
 				8BA27C871C3B2404009EE1D1 /* LaunchScreen.storyboard */,
@@ -193,6 +172,35 @@
 				8BA27CA01C3B2404009EE1D1 /* Info.plist */,
 			);
 			path = WordGameUITests;
+			sourceTree = "<group>";
+		};
+		8BC60FBE1C501C4C004790C9 /* GameLevel */ = {
+			isa = PBXGroup;
+			children = (
+				8BA27CD21C3BC10F009EE1D1 /* WGGameViewController.h */,
+				8BA27CD01C3BC0DE009EE1D1 /* WGGameViewController.m */,
+				8BA27CAF1C3B3EF2009EE1D1 /* WGGame1ViewController.h */,
+				8BA27CB01C3B3EF2009EE1D1 /* WGGame1ViewController.m */,
+				8BA27CB21C3B45D9009EE1D1 /* WGGame2ViewController.h */,
+				8BA27CB31C3B45D9009EE1D1 /* WGGame2ViewController.m */,
+				8BA27CB51C3BB76B009EE1D1 /* WGGame3ViewController.h */,
+				8BA27CB61C3BB76B009EE1D1 /* WGGame3ViewController.m */,
+				8BA27CB81C3BB77D009EE1D1 /* WGGame4ViewController.h */,
+				8BA27CB91C3BB77D009EE1D1 /* WGGame4ViewController.m */,
+				8BA27CBB1C3BB78C009EE1D1 /* WGGame5ViewController.h */,
+				8BA27CBC1C3BB78C009EE1D1 /* WGGame5ViewController.m */,
+				8BA27CBE1C3BB799009EE1D1 /* WGGame6ViewController.h */,
+				8BA27CBF1C3BB799009EE1D1 /* WGGame6ViewController.m */,
+				8BA27CC11C3BB7AA009EE1D1 /* WGGame7ViewController.h */,
+				8BA27CC21C3BB7AA009EE1D1 /* WGGame7ViewController.m */,
+				8BA27CC41C3BB7B8009EE1D1 /* WGGame8ViewController.h */,
+				8BA27CC51C3BB7B8009EE1D1 /* WGGame8ViewController.m */,
+				8BA27CCD1C3BB87B009EE1D1 /* WGGame9ViewController.h */,
+				8BA27CCE1C3BB87B009EE1D1 /* WGGame9ViewController.m */,
+				8BA27CCA1C3BB85A009EE1D1 /* WGGame10ViewController.h */,
+				8BA27CCB1C3BB85A009EE1D1 /* WGGame10ViewController.m */,
+			);
+			name = GameLevel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

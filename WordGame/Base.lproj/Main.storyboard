@@ -336,7 +336,6 @@
         <!--Game View Controller-->
         <scene sceneID="Jcy-Sr-iDp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HBC-eq-7pM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="t7w-Ot-lZ5" customClass="WGGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kNH-xE-ogF"/>
@@ -623,6 +622,7 @@
                         <outlet property="next" destination="OcI-em-f6h" id="vZF-dS-em9"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBC-eq-7pM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="955" y="336"/>
         </scene>

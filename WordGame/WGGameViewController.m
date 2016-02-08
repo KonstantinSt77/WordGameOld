@@ -21,8 +21,7 @@
 
 @implementation WGGameViewController
 
-#define word userWord
-#define chancee chance
+
 #define strStr stringByAppendingString
 
 - (void)viewDidLoad {
@@ -33,7 +32,7 @@
 
 
 NSString *word = @"";
-NSInteger chancee = 3;
+NSInteger chance = 3;
 
 -(IBAction)letterC:(id)sender
 {
@@ -74,15 +73,12 @@ else
     self.answerLabel.text = @"Неверно! Попробуй еще раз";
     word = @"";
         self.next.hidden = YES;
-    chancee--;
+    chance--;
         
         
     
         self.chance.text = [@(chance) description];
     }
 }
-
-    
-    
-
-}@end
+}
+@end

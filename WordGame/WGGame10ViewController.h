@@ -8,6 +8,6 @@
 
 #import "WGGame1ViewController.h"
 
-@interface WGGame10ViewController : WGGame1ViewController
+@interface WGGame10ViewController : UIViewController
 
 @end

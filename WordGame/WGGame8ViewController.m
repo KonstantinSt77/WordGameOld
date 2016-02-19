@@ -8,17 +8,15 @@
 
 
 #import "WGGame8ViewController.h"
-
+#define strStr stringByAppendingString
 @interface WGGame8ViewController ()
 
-
--(IBAction)letterA:(id)sender;
--(IBAction)letterN:(id)sender;
--(IBAction)letterT:(id)sender;
--(IBAction)letterI:(id)sender;
 -(IBAction)letterK:(id)sender;
 -(IBAction)letterV:(id)sender;
+-(IBAction)letterA:(id)sender;
 -(IBAction)letterR:(id)sender;
+-(IBAction)letterT:(id)sender;
+-(IBAction)letterI:(id)sender;
 -(IBAction)okAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *next;
 @property (strong, nonatomic) IBOutlet UILabel *answerLabel;
@@ -27,76 +25,64 @@
 
 @implementation WGGame8ViewController
 
-
-#define word userWord8
-#define chance chance8
-#define strStr stringByAppendingString
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   //self.next.hidden = YES;
 }
 
-
-NSString *word = @"";
-NSInteger chance = 3;
-
--(IBAction)letterA:(id)sender
-{
-    word = [word strStr:@"A"];
-}
-
--(IBAction)letterN:(id)sender
-{
-    word = [word strStr:@"N"];
-}
-
--(IBAction)letterT:(id)sender
-{
-    word = [word strStr:@"T"];
-}
-
--(IBAction)letterI:(id)sender
-{
-    word = [word strStr:@"I"];
-}
+NSString *word8 = @"";
+NSInteger chance8 = 3;
 
 -(IBAction)letterK:(id)sender
 {
-    word = [word strStr:@"K"];
+    word8 = [word8 strStr:@"K"];
 }
 
 -(IBAction)letterV:(id)sender
 {
-    word = [word strStr:@"V"];
+    word8 = [word8 strStr:@"V"];
+}
+
+-(IBAction)letterA:(id)sender
+{
+    word8 = [word8 strStr:@"A"];
 }
 
 -(IBAction)letterR:(id)sender
 {
-    word = [word strStr:@"R"];
+    word8 = [word8 strStr:@"R"];
+}
+
+-(IBAction)letterT:(id)sender
+{
+    word8 = [word8 strStr:@"T"];
+}
+
+-(IBAction)letterI:(id)sender
+{
+    word8 = [word8 strStr:@"I"];
 }
 
 -(IBAction)okAction:(id)sender {
-    if ( [word  isEqual: @"ANTIKVAR" ]|| [word  isEqual: @"nos"] )
+    if ( [word8  isEqual: @"KVARTIRA" ])
     {
         self.answerLabel.text = @"Не так уж и сложно - Ты отгадал:)";
-        word = @"";
+        word8 = @"";
         self.next.hidden = NO;
     }
     else
     {
-        if (chance == 0) {
+        if (chance8 == 0) {
             self.answerLabel.text = @"Ты проиграл!";
             self.next.hidden = YES;
         }
         else
         {
             self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            word = @"";
+            word8 = @"";
             self.next.hidden = YES;
-            chance--;
-            // NSString *str = @(chance);
-            //self.chance.text = str;
+            chance8--;
+            self.chance.text = [@(chance8) description];
         }
     }
     

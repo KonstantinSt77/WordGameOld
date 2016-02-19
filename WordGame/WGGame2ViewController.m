@@ -7,15 +7,14 @@
 //
 
 #import "WGGame2ViewController.h"
-
+#define strStr stringByAppendingString
 @interface WGGame2ViewController ()
-
+-(IBAction)letterI:(id)sender;
+-(IBAction)letterS:(id)sender;
+-(IBAction)letterT:(id)sender;
+-(IBAction)letterO:(id)sender;
 -(IBAction)letterR:(id)sender;
--(IBAction)letterE:(id)sender;
 -(IBAction)letterK:(id)sender;
--(IBAction)letterL:(id)sender;
--(IBAction)letterA:(id)sender;
--(IBAction)letterM:(id)sender;
 -(IBAction)okAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *next;
 @property (strong, nonatomic) IBOutlet UILabel *answerLabel;
@@ -23,60 +22,55 @@
 @end
 
 @implementation WGGame2ViewController
-
-#define word userWord2
-#define chancee chance2
-#define strStr stringByAppendingString
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.next.hidden = YES;
-    // Do any additional setup after loading the view.
+   //self.next.hidden = YES;
 }
 
+NSString *word3 = @"";
+NSInteger chance3 = 3;
 
-NSString *word = @"";
-NSInteger chancee = 3;
+-(IBAction)letterI:(id)sender
+{
+    word3 = [word3 strStr:@"I"];
+}
+
+-(IBAction)letterS:(id)sender
+{
+    word3 = [word3 strStr:@"S"];
+}
+
+-(IBAction)letterT:(id)sender
+{
+    word3 = [word3 strStr:@"T"];
+}
+
+-(IBAction)letterO:(id)sender
+{
+    word3 = [word3 strStr:@"O"];
+}
 
 -(IBAction)letterR:(id)sender
 {
-    word = [word strStr:@"R"];
+    word3 = [word3 strStr:@"R"];
 }
--(IBAction)letterE:(id)sender
-{
-    word = [word strStr:@"E"];
-}
+
 -(IBAction)letterK:(id)sender
 {
-    word = [word strStr:@"K"];
-}
-
--(IBAction)letterL:(id)sender
-{
-    word = [word strStr:@"L"];
-}
-
--(IBAction)letterA:(id)sender
-{
-    word = [word strStr:@"A"];
-}
-
--(IBAction)letterM:(id)sender
-{
-    word = [word strStr:@"M"];
+    word3 = [word3 strStr:@"K"];
 }
 
 
 -(IBAction)okAction:(id)sender {
-    if ( [word  isEqual: @"REKLAMA" ])
+    if ( [word3  isEqual: @"ISTORIK" ])
     {
-        self.answerLabel.text = @"Ты отгадал, это Реклама!:)";
-        word = @"";
+        self.answerLabel.text = @"Не так уж и сложно, это Историк";
+        word3 = @"";
         self.next.hidden = NO;
     }
     else
     {
-        if (chancee == 1) {
+        if (chance3 == 1) {
             self.answerLabel.text = @"Ты проиграл!";
             self.next.hidden = YES;
             self.chance.text = @"0";
@@ -84,15 +78,14 @@ NSInteger chancee = 3;
         else
         {
             self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            word = @"";
+            word3 = @"";
             self.next.hidden = YES;
-            chancee--;
-            // NSString *str = @(chance);
-            //self.chance.text = str;
+            chance3--;
+            self.chance.text = [@(chance3) description];
         }
     }
     
     
     
     
-}@end 
+}@end

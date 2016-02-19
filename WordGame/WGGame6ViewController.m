@@ -7,17 +7,17 @@
 //
 
 #import "WGGame6ViewController.h"
-
+#define strStr stringByAppendingString
 @interface WGGame6ViewController ()
 
-
--(IBAction)letterA:(id)sender;
--(IBAction)letterN:(id)sender;
--(IBAction)letterT:(id)sender;
+-(IBAction)letterCC:(id)sender;
 -(IBAction)letterI:(id)sender;
+-(IBAction)letterP:(id)sender;
+-(IBAction)letterL:(id)sender;
+-(IBAction)letterE:(id)sender;
+-(IBAction)letterN:(id)sender;
+-(IBAction)letterO:(id)sender;
 -(IBAction)letterK:(id)sender;
--(IBAction)letterV:(id)sender;
--(IBAction)letterR:(id)sender;
 -(IBAction)okAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *next;
 @property (strong, nonatomic) IBOutlet UILabel *answerLabel;
@@ -26,75 +26,72 @@
 
 @implementation WGGame6ViewController
 
-#define word userWord6
-#define chance chance6
-#define strStr stringByAppendingString
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //self.next.hidden = YES;
 }
 
+NSString *word6 = @"";
+NSInteger chance6 = 3;
 
-NSString *word = @"";
-NSInteger chance = 3;
-
--(IBAction)letterA:(id)sender
+-(IBAction)letterCC:(id)sender
 {
-    word = [word strStr:@"A"];
-}
-
--(IBAction)letterN:(id)sender
-{
-    word = [word strStr:@"N"];
-}
-
--(IBAction)letterT:(id)sender
-{
-    word = [word strStr:@"T"];
+    word6 = [word6 strStr:@"C"];
 }
 
 -(IBAction)letterI:(id)sender
 {
-    word = [word strStr:@"I"];
+    word6 = [word6 strStr:@"I"];
 }
 
+-(IBAction)letterP:(id)sender
+{
+    word6 = [word6 strStr:@"P"];
+}
+
+-(IBAction)letterL:(id)sender
+{
+    word6 = [word6 strStr:@"L"];
+}
+
+-(IBAction)letterE:(id)sender
+{
+    word6 = [word6 strStr:@"E"];
+}
+
+-(IBAction)letterN:(id)sender
+{
+    word6 = [word6 strStr:@"N"];
+}
+
+-(IBAction)letterO:(id)sender
+{
+    word6 = [word6 strStr:@"O"];
+}
 -(IBAction)letterK:(id)sender
 {
-    word = [word strStr:@"K"];
+    word6 = [word6 strStr:@"K"];
 }
-
--(IBAction)letterV:(id)sender
-{
-    word = [word strStr:@"V"];
-}
-
--(IBAction)letterR:(id)sender
-{
-    word = [word strStr:@"R"];
-}
-
 -(IBAction)okAction:(id)sender {
-    if ( [word  isEqual: @"ANTIKVAR" ]|| [word  isEqual: @"nos"] )
+    if ( [word6  isEqual: @"CIPLENOK" ])
     {
         self.answerLabel.text = @"Не так уж и сложно - Ты отгадал:)";
-        word = @"";
+        word6 = @"";
         self.next.hidden = NO;
     }
     else
     {
-        if (chance == 0) {
+        if (chance6 == 0) {
             self.answerLabel.text = @"Ты проиграл!";
             self.next.hidden = YES;
         }
         else
         {
             self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            word = @"";
+            word6 = @"";
             self.next.hidden = YES;
-            chance--;
-            // NSString *str = @(chance);
-            //self.chance.text = str;
+            chance6--;
+            self.chance.text = [@(chance6) description];
         }
     }
     

@@ -7,16 +7,17 @@
 //
 
 #import "WGGame4ViewController.h"
-
+#define strStr stringByAppendingString
 @interface WGGame4ViewController ()
 
 
+-(IBAction)letterP:(id)sender;
+-(IBAction)letterL:(id)sender;
 -(IBAction)letterA:(id)sender;
--(IBAction)letterN:(id)sender;
--(IBAction)letterT:(id)sender;
+-(IBAction)letterG:(id)sender;
 -(IBAction)letterI:(id)sender;
--(IBAction)letterK:(id)sender;
--(IBAction)letterV:(id)sender;
+-(IBAction)letterT:(id)sender;
+-(IBAction)letterO:(id)sender;
 -(IBAction)letterR:(id)sender;
 -(IBAction)okAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *next;
@@ -26,76 +27,74 @@
 
 @implementation WGGame4ViewController
 
-#define word userWord4
-#define chance chance4
-#define strStr stringByAppendingString
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //self.next.hidden = YES;
 }
 
 
-NSString *word = @"";
-NSInteger chance = 3;
+NSString *word4 = @"";
+NSInteger chance4 = 3;
+
+-(IBAction)letterP:(id)sender
+{
+    word4 = [word4 strStr:@"P"];
+}
+
+-(IBAction)letterL:(id)sender
+{
+    word4 = [word4 strStr:@"L"];
+}
 
 -(IBAction)letterA:(id)sender
 {
-    word = [word strStr:@"A"];
+    word4 = [word4 strStr:@"A"];
 }
 
--(IBAction)letterN:(id)sender
+-(IBAction)letterG:(id)sender
 {
-    word = [word strStr:@"N"];
-}
-
--(IBAction)letterT:(id)sender
-{
-    word = [word strStr:@"T"];
+    word4 = [word4 strStr:@"G"];
 }
 
 -(IBAction)letterI:(id)sender
 {
-    word = [word strStr:@"I"];
+    word4 = [word4 strStr:@"I"];
 }
 
--(IBAction)letterK:(id)sender
+-(IBAction)letterT:(id)sender
 {
-    word = [word strStr:@"K"];
+    word4 = [word4 strStr:@"T"];
 }
-
--(IBAction)letterV:(id)sender
+-(IBAction)letterO:(id)sender
 {
-    word = [word strStr:@"V"];
+    word4 = [word4 strStr:@"O"];
 }
-
 -(IBAction)letterR:(id)sender
 {
-    word = [word strStr:@"R"];
+    word4 = [word4 strStr:@"R"];
 }
 
 -(IBAction)okAction:(id)sender {
-    if ( [word  isEqual: @"ANTIKVAR" ]|| [word  isEqual: @"nos"] )
+    if ( [word4  isEqual: @"PLAGIATOR" ])
     {
         self.answerLabel.text = @"Не так уж и сложно - Ты отгадал:)";
-        word = @"";
+        word4 = @"";
         self.next.hidden = NO;
     }
     else
     {
-        if (chance == 1) {
+        if (chance4 == 1) {
             self.answerLabel.text = @"Ты проиграл!";
             self.next.hidden = YES;
-            //self.chance.text = @"0";
+            self.chance.text = @"0";
         }
         else
         {
             self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            word = @"";
+            word4 = @"";
             self.next.hidden = YES;
-            chance--;
-            // NSString *str = @(chance);
-            //self.chance.text = str;
+            chance4--;
+            self.chance.text = [@(chance4) description];
         }
     }
     

@@ -7,7 +7,7 @@
 //
 
 #import "WGStartViewController.h"
-#define strStr stringByAppendingString
+
 
 @interface WGStartViewController ()
 

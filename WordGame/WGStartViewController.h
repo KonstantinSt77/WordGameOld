@@ -6,8 +6,9 @@
 //  Copyright © 2016 Stolyarenko K.S. All rights reserved.
 //
 
-#import "ViewController.h"
 
-@interface WGStartViewController : ViewController
+#import <UIKit/UIKit.h>
+
+@interface WGStartViewController : UIViewController
 
 @end

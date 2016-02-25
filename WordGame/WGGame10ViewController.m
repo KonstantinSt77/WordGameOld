@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.next.hidden = YES;
+    self.next.hidden = YES;
 }
 
 NSString *word10 = @"";
@@ -48,7 +48,7 @@ NSInteger chance10 = 3;
 -(IBAction)okAction:(id)sender {
     if ( [word10  isEqual: @"DUH" ])
     {
-        self.answerLabel.text = @"Не так уж и сложно - Ты отгадал:)";
+        self.answerLabel.text = @"Молодец! Ты прошел игру - Поздравляю!:)";
         word10 = @"";
         self.next.hidden = NO;
     }

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Stolyarenko K.S. All rights reserved.
 //
 
-#import "WGGame1ViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface WGGame2ViewController : UIViewController
 

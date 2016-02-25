@@ -29,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.next.hidden = YES;
+    self.next.hidden = YES;
 }
 
 

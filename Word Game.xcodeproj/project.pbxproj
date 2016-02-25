@@ -27,7 +27,6 @@
 		8BA27CCC1C3BB85A009EE1D1 /* WGGame10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27CCB1C3BB85A009EE1D1 /* WGGame10ViewController.m */; };
 		8BA27CCF1C3BB87B009EE1D1 /* WGGame9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27CCE1C3BB87B009EE1D1 /* WGGame9ViewController.m */; };
 		8BC60FC21C502782004790C9 /* WGHardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC60FC11C502782004790C9 /* WGHardGameViewController.m */; };
-		D18ECEBB1C7F6917005B706B /* rrrrr.m in Sources */ = {isa = PBXBuildFile; fileRef = D18ECEBA1C7F6917005B706B /* rrrrr.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +87,6 @@
 		8BA27CCE1C3BB87B009EE1D1 /* WGGame9ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGGame9ViewController.m; sourceTree = "<group>"; };
 		8BC60FC01C502782004790C9 /* WGHardGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGHardGameViewController.h; sourceTree = "<group>"; };
 		8BC60FC11C502782004790C9 /* WGHardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGHardGameViewController.m; sourceTree = "<group>"; };
-		D18ECEB91C7F6917005B706B /* rrrrr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rrrrr.h; sourceTree = "<group>"; };
-		D18ECEBA1C7F6917005B706B /* rrrrr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rrrrr.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +139,6 @@
 			children = (
 				8BA27C7C1C3B2404009EE1D1 /* AppDelegate.h */,
 				8BA27C7D1C3B2404009EE1D1 /* AppDelegate.m */,
-				D18ECEB91C7F6917005B706B /* rrrrr.h */,
-				D18ECEBA1C7F6917005B706B /* rrrrr.m */,
 				8B554D1A1C6B42E20009CC67 /* WGStartViewController.h */,
 				8B554D1B1C6B42E20009CC67 /* WGStartViewController.m */,
 				8BC60FBE1C501C4C004790C9 /* PoemGameLevel */,
@@ -367,7 +362,6 @@
 				8BA27CC31C3BB7AA009EE1D1 /* WGGame7ViewController.m in Sources */,
 				8BA27C7E1C3B2404009EE1D1 /* AppDelegate.m in Sources */,
 				8BA27C7B1C3B2404009EE1D1 /* main.m in Sources */,
-				D18ECEBB1C7F6917005B706B /* rrrrr.m in Sources */,
 				8BC60FC21C502782004790C9 /* WGHardGameViewController.m in Sources */,
 				8BA27CCF1C3BB87B009EE1D1 /* WGGame9ViewController.m in Sources */,
 				8BA27CBD1C3BB78C009EE1D1 /* WGGame5ViewController.m in Sources */,

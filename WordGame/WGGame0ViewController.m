@@ -26,6 +26,8 @@ NSInteger chance = 3;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.next.hidden = YES;
+    word = @"";
+    chance = 3;
 }
 
 -(IBAction)letterC:(id)sender
@@ -51,27 +53,32 @@ NSInteger chance = 3;
 
 -(IBAction)okAction:(id)sender {
     
-    if ( [word  isEqual: @"slon" ] )
-    {
-        self.answerLabel.text = @"Отлично, ты отгадал, это - Слон!:)";
-        word = @"";
-        self.next.hidden = NO;
-    }
-    else
-    {
-        if (chance == 1) {
-            self.answerLabel.text = @"Ты проиграл!";
-            self.next.hidden = YES;
-            self.chance.text = @"0";
-        }
+    if (chance == 3 || chance == 2 || chance == 1){
+        if ( [word  isEqual: @"slon" ] )
+            {
+                self.answerLabel.text = @"Отлично, ты отгадал!";
+                word = @"";
+                self.next.hidden = NO;
+            }
         else
-        {
-            self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            word = @"";
-            self.next.hidden = YES;
-            chance--;
-            self.chance.text = [@(chance) description];
-        }
+            {
+                if (chance == 1)
+                {
+                    self.answerLabel.text = @"Ты проиграл!";
+                    self.next.hidden = YES;
+                    chance = 0;
+                    self.chance.text = @"0";
+                }
+                else
+                {
+                    self.answerLabel.text = @"Неверно! Попробуй еще раз";
+                    word = @"";
+                    self.next.hidden = YES;
+                    chance--;
+                    self.chance.text = [@(chance) description];
+                
+                }
+            }
     }
 }
 

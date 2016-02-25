@@ -19,43 +19,48 @@
 
 @implementation WGGame9ViewController
 
+NSString *word9 = @"";
+NSInteger chance9 = 3;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
    self.next.hidden = YES;
+    word9 = @"";
+    chance9 = 3;
+    
 }
-
-
-NSString *word9 = @"";
-NSInteger chance9 = 3;
 
 -(IBAction)letterB:(id)sender
 {
     word9 = [word9 strStr:@"B"];
 }
 -(IBAction)okAction:(id)sender {
-    if ( [word9  isEqual: @"B" ])
-    {
-        self.answerLabel.text = @"Не так уж и сложно - Ты отгадал:)";
-        word9 = @"";
-        self.next.hidden = NO;
-    }
-    else
-    {
-        if (chance9 == 0) {
-            self.answerLabel.text = @"Ты проиграл!";
-            self.next.hidden = YES;
+
+        if (chance9 == 3 || chance9 == 2 || chance9 == 1){
+            if ( [word9  isEqual: @"B" ] )
+            {
+                self.answerLabel.text = @"Отлично, ты отгадал!";
+                word9 = @"";
+                self.next.hidden = NO;
+            }
+            else
+            {
+                if (chance9 == 1)
+                {
+                    self.answerLabel.text = @"Ты проиграл!";
+                    self.next.hidden = YES;
+                    chance9 = 0;
+                    self.chance.text = @"0";
+                }
+                else
+                {
+                    self.answerLabel.text = @"Неверно! Попробуй еще раз";
+                    word9 = @"";
+                    self.next.hidden = YES;
+                    chance9--;
+                    self.chance.text = [@(chance9) description];
+                    
+                }
+            }
         }
-        else
-        {
-            self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            word9 = @"";
-            self.next.hidden = YES;
-            chance9--;
-            self.chance.text = [@(chance9) description];
-        }
-    }
-    
-    
-    
-    
-}@end 
+}@end

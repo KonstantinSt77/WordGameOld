@@ -23,15 +23,15 @@
 
 @implementation WGGame1ViewController
 
-
+NSString *word2 = @"";
+NSInteger chance2 = 3;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.next.hidden = YES;
+    word2 = @"";
+    chance2 = 3;
 }
-
-NSString *word2 = @"";
-NSInteger chance2 = 3;
 
 -(IBAction)letterR:(id)sender
 {
@@ -63,30 +63,32 @@ NSInteger chance2 = 3;
 
 
 -(IBAction)okAction:(id)sender {
-    if ( [word2 isEqual: @"REKLAMA" ])
-    {
-        self.answerLabel.text = @"Ты отгадал, это Реклама!:)";
-        word2 = @"";
-        self.next.hidden = NO;
-    }
-    else
-    {
-        if (chance2 == 1) {
-            self.answerLabel.text = @"Ты проиграл!";
-            self.next.hidden = YES;
-            self.chance.text = @"0";
+        if (chance2 == 3 || chance2 == 2 || chance2 == 1){
+            if ( [word2  isEqual: @"REKLAMA" ] )
+            {
+                self.answerLabel.text = @"Отлично, ты отгадал!";
+                word2 = @"";
+                self.next.hidden = NO;
+            }
+            else
+            {
+                if (chance2 == 1)
+                {
+                    self.answerLabel.text = @"Ты проиграл!";
+                    self.next.hidden = YES;
+                    chance2 = 0;
+                    self.chance.text = @"0";
+                }
+                else
+                {
+                    self.answerLabel.text = @"Неверно! Попробуй еще раз";
+                    word2 = @"";
+                    self.next.hidden = YES;
+                    chance2--;
+                    self.chance.text = [@(chance2) description];
+                    
+                }
+            }
         }
-        else
-        {
-            self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            word2 = @"";
-            self.next.hidden = YES;
-            chance2--;
-            self.chance.text = [@(chance2) description];
-        }
-    }
-    
-    
-    
     
 }@end

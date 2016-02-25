@@ -23,14 +23,15 @@
 
 @implementation WGGame3ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.next.hidden = YES;
-}
-
 NSString *word1 = @"";
 NSInteger chance1 = 3;
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.next.hidden = YES;
+    word1 = @"";
+    chance1 = 3;
+}
 
 -(IBAction)letterA:(id)sender
 {
@@ -58,28 +59,34 @@ NSInteger chance1 = 3;
 }
 
 -(IBAction)okAction:(id)sender {
-    if ( [word1  isEqual: @"ALTAR," ])
-    {
-        self.answerLabel.text = @"Ты отгадал, это - Алтарь!:)";
-        word1 = @"";
-        self.next.hidden = NO;
-    }
-    else
-    {
-        if (chance1 == 1) {
-            self.answerLabel.text = @"Ты проиграл!";
-            self.next.hidden = YES;
-            self.chance.text = @"0";
+
+        if (chance1 == 3 || chance1 == 2 || chance1 == 1){
+            if ( [word1  isEqual: @"ALTAR" ] )
+            {
+                self.answerLabel.text = @"Отлично, ты отгадал!";
+                word1 = @"";
+                self.next.hidden = NO;
+            }
+            else
+            {
+                if (chance1 == 1)
+                {
+                    self.answerLabel.text = @"Ты проиграл!";
+                    self.next.hidden = YES;
+                    chance1 = 0;
+                    self.chance.text = @"0";
+                }
+                else
+                {
+                    self.answerLabel.text = @"Неверно! Попробуй еще раз";
+                    word1 = @"";
+                    self.next.hidden = YES;
+                    chance1--;
+                    self.chance.text = [@(chance1) description];
+                    
+                }
+            }
         }
-        else
-        {
-            self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            word1 = @"";
-            self.next.hidden = YES;
-            chance1--;
-            self.chance.text = [@(chance1) description];
-        }
-    }
     
 }
 @end

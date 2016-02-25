@@ -26,14 +26,15 @@
 
 @implementation WGGame6ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.next.hidden = YES;
-}
-
 NSString *word6 = @"";
 NSInteger chance6 = 3;
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.next.hidden = YES;
+    word6 = @"";
+    chance6 = 3;
+}
 -(IBAction)letterCC:(id)sender
 {
     word6 = [word6 strStr:@"C"];
@@ -73,29 +74,32 @@ NSInteger chance6 = 3;
     word6 = [word6 strStr:@"K"];
 }
 -(IBAction)okAction:(id)sender {
-    if ( [word6  isEqual: @"CIPLENOK" ])
-    {
-        self.answerLabel.text = @"Не так уж и сложно - Ты отгадал:)";
-        word6 = @"";
-        self.next.hidden = NO;
-    }
-    else
-    {
-        if (chance6 == 0) {
-            self.answerLabel.text = @"Ты проиграл!";
-            self.next.hidden = YES;
+
+        if (chance6 == 3 || chance6 == 2 || chance6 == 1){
+            if ( [word6  isEqual: @"CIPLENOK" ] )
+            {
+                self.answerLabel.text = @"Отлично, ты отгадал!";
+                word6 = @"";
+                self.next.hidden = NO;
+            }
+            else
+            {
+                if (chance6 == 1)
+                {
+                    self.answerLabel.text = @"Ты проиграл!";
+                    self.next.hidden = YES;
+                    chance6 = 0;
+                    self.chance.text = @"0";
+                }
+                else
+                {
+                    self.answerLabel.text = @"Неверно! Попробуй еще раз";
+                    word6 = @"";
+                    self.next.hidden = YES;
+                    chance6--;
+                    self.chance.text = [@(chance6) description];
+                    
+                }
+            }
         }
-        else
-        {
-            self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            word6 = @"";
-            self.next.hidden = YES;
-            chance6--;
-            self.chance.text = [@(chance6) description];
-        }
-    }
-    
-    
-    
-    
 }@end

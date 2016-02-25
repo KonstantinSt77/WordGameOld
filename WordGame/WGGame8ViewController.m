@@ -25,13 +25,15 @@
 
 @implementation WGGame8ViewController
 
+NSString *word8 = @"";
+NSInteger chance8 = 3;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
    self.next.hidden = YES;
+    word8 = @"";
+    chance8 = 3;
 }
-
-NSString *word8 = @"";
-NSInteger chance8 = 3;
 
 -(IBAction)letterK:(id)sender
 {
@@ -64,29 +66,32 @@ NSInteger chance8 = 3;
 }
 
 -(IBAction)okAction:(id)sender {
-    if ( [word8  isEqual: @"KVARTIRA" ])
-    {
-        self.answerLabel.text = @"Не так уж и сложно - Ты отгадал:)";
-        word8 = @"";
-        self.next.hidden = NO;
-    }
-    else
-    {
-        if (chance8 == 0) {
-            self.answerLabel.text = @"Ты проиграл!";
-            self.next.hidden = YES;
+ 
+        if (chance8 == 3 || chance8 == 2 || chance8 == 1){
+            if ( [word8  isEqual: @"KVARTIRA" ] )
+            {
+                self.answerLabel.text = @"Отлично, ты отгадал!";
+                word8 = @"";
+                self.next.hidden = NO;
+            }
+            else
+            {
+                if (chance8 == 1)
+                {
+                    self.answerLabel.text = @"Ты проиграл!";
+                    self.next.hidden = YES;
+                    chance8 = 0;
+                    self.chance.text = @"0";
+                }
+                else
+                {
+                    self.answerLabel.text = @"Неверно! Попробуй еще раз";
+                    word8 = @"";
+                    self.next.hidden = YES;
+                    chance8--;
+                    self.chance.text = [@(chance8) description];
+                    
+                }
+            }
         }
-        else
-        {
-            self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            word8 = @"";
-            self.next.hidden = YES;
-            chance8--;
-            self.chance.text = [@(chance8) description];
-        }
-    }
-    
-    
-    
-    
 }@end

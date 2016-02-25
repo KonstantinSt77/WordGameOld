@@ -19,15 +19,16 @@
 
 @implementation WGGame7ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.next.hidden = YES;
-}
-
 NSString *word7 = @"";
 NSInteger chance7 = 3;
 
-
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.next.hidden = YES;
+    word7 = @"";
+    chance7 = 3;
+    
+}
 
 -(IBAction)letterN:(id)sender
 {
@@ -36,29 +37,32 @@ NSInteger chance7 = 3;
 
 
 -(IBAction)okAction:(id)sender {
-    if ( [word7  isEqual: @"N" ])
-    {
-        self.answerLabel.text = @"Не так уж и сложно - Ты отгадал:)";
-        word7 = @"";
-        self.next.hidden = NO;
-    }
-    else
-    {
-        if (chance7 == 0) {
-            self.answerLabel.text = @"Ты проиграл!";
-            self.next.hidden = YES;
+
+        if (chance7 == 3 || chance7 == 2 || chance7 == 1){
+            if ( [word7  isEqual: @"N" ] )
+            {
+                self.answerLabel.text = @"Отлично, ты отгадал!";
+                word7 = @"";
+                self.next.hidden = NO;
+            }
+            else
+            {
+                if (chance7 == 1)
+                {
+                    self.answerLabel.text = @"Ты проиграл!";
+                    self.next.hidden = YES;
+                    chance7 = 0;
+                    self.chance.text = @"0";
+                }
+                else
+                {
+                    self.answerLabel.text = @"Неверно! Попробуй еще раз";
+                    word7 = @"";
+                    self.next.hidden = YES;
+                    chance7--;
+                    self.chance.text = [@(chance7) description];
+                    
+                }
+            }
         }
-        else
-        {
-            self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            word7 = @"";
-            self.next.hidden = YES;
-            chance7--;
-            self.chance.text = [@(chance7) description];
-        }
-    }
-    
-    
-    
-    
-}@end 
+}@end

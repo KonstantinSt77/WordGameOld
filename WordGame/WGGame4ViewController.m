@@ -27,14 +27,15 @@
 
 @implementation WGGame4ViewController
 
+NSString *word4 = @"";
+NSInteger chance4 = 3;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.next.hidden = YES;
+    word4 = @"";
+    chance4 = 3;
 }
-
-
-NSString *word4 = @"";
-NSInteger chance4 = 3;
 
 -(IBAction)letterP:(id)sender
 {
@@ -75,30 +76,33 @@ NSInteger chance4 = 3;
 }
 
 -(IBAction)okAction:(id)sender {
-    if ( [word4  isEqual: @"PLAGIATOR" ])
-    {
-        self.answerLabel.text = @"Не так уж и сложно - Ты отгадал:)";
-        word4 = @"";
-        self.next.hidden = NO;
-    }
-    else
-    {
-        if (chance4 == 1) {
-            self.answerLabel.text = @"Ты проиграл!";
-            self.next.hidden = YES;
-            self.chance.text = @"0";
+ 
+        if (chance4 == 3 || chance4 == 2 || chance4 == 1){
+            if ( [word4  isEqual: @"PLAGIATOR" ] )
+            {
+                self.answerLabel.text = @"Отлично, ты отгадал!";
+                word4 = @"";
+                self.next.hidden = NO;
+            }
+            else
+            {
+                if (chance4 == 1)
+                {
+                    self.answerLabel.text = @"Ты проиграл!";
+                    self.next.hidden = YES;
+                    chance4 = 0;
+                    self.chance.text = @"0";
+                }
+                else
+                {
+                    self.answerLabel.text = @"Неверно! Попробуй еще раз";
+                    word4 = @"";
+                    self.next.hidden = YES;
+                    chance4--;
+                    self.chance.text = [@(chance4) description];
+                    
+                }
+            }
         }
-        else
-        {
-            self.answerLabel.text = @"Неверно! Попробуй еще раз";
-            word4 = @"";
-            self.next.hidden = YES;
-            chance4--;
-            self.chance.text = [@(chance4) description];
-        }
-    }
-    
-    
-    
     
 }@end
